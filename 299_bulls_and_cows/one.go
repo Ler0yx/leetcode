@@ -5,6 +5,7 @@ import (
 	"strings"
 )
 
+//Creates the hint for the bulls and cows game.
 func getHint(secret string, guess string) string {
 	var solution string
 	var possibleCow []byte
@@ -15,23 +16,23 @@ func getHint(secret string, guess string) string {
 
 	for i := 0; i < len(secret); i++ {
 
+		//If the strings are equal, the Bull-Counter gets incremented by +1.
 		if secret[i] == guess[i] {
 			counterB += 1
+
+		//If the strings are unequal, the string gets added to the map (if not already present) and incremented by +1.
+		//The string is also added to a slice to iterate over later to find all the Cows.
 		} else {
 			cowsMap[secret[i]] += 1
 			possibleCow = append(possibleCow, byte(guess[i]))
 		}
 	}
-	fmt.Println("pC: ", possibleCow)
-	fmt.Println("cM: ", cowsMap)
+
+	//Iterates over the Map and compares it to the slice of possible cows.
 	for i := 0; i < len(possibleCow); i++ {
-		fmt.Println(possibleCow[i])
 		if cowsMap[possibleCow[i]] > 0 {
-			fmt.Println("guess:", possibleCow[i])
 			cowsMap[possibleCow[i]] -= 1
-			fmt.Println("cM:", cowsMap)
 			counterC += 1
-			fmt.Println("counterC:", counterC)
 		}
 	}
 	solutionSlice = []string{fmt.Sprint(counterB), "A", fmt.Sprint(counterC), "B"}
@@ -41,7 +42,4 @@ func getHint(secret string, guess string) string {
 
 func main() {
 	fmt.Println(getHint("7823456872345", "7834926587346"))
-	//3:2 6:2 2:1 4:1 5:1 7:1
-	//8:3 4:1 3:1 5:1 6:1 9:1
-	//3:1 6:1 2:0 4:1 5:1 7:0
 }
