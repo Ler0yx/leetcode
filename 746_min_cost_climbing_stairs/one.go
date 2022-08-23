@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func minCostClimbingStairs(cost []int) int {
 
 	costTotal := 0
@@ -93,11 +91,4 @@ func minCostClimbingStairs(cost []int) int {
 	}
 
 	return costTotal
-}
-
-func main() {
-
-	cost := []int{1, 100, 1, 1, 1, 100, 1, 1, 100, 1}
-
-	fmt.Println(minCostClimbingStairs(cost))
 }
