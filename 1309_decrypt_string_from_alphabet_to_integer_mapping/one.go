@@ -1,4 +1,4 @@
-package main
+package decryptStringFromAlphabetToIntegerMapping
 
 func freqAlphabets(s string) string {
 

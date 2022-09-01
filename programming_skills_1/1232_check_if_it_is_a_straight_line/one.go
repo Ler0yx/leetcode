@@ -1,4 +1,4 @@
-package main
+package checkIfItIsAStraightLine
 
 func checkStraightLine(coordinates [][]int) bool {
 

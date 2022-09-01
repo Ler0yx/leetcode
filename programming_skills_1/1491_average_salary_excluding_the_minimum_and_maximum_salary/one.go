@@ -1,7 +1,6 @@
-package main
+package averageSalaryExcludingTheMinimumAndMaximumSalary
 
 import (
-	"fmt"
 	"sort"
 )
 
@@ -14,12 +13,4 @@ func average(salary []int) float64 {
 		tmp += float64(v)
 	}
 	return tmp / (float64(len(salary)) - 2)
-}
-
-func main() {
-
-	salary := []int{1000, 2000, 3000, 999999, 999998}
-
-	fmt.Println(average(salary))
-
 }

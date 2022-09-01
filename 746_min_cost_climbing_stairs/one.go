@@ -1,4 +1,4 @@
-package main
+package minMostClimbingStairs
 
 func minCostClimbingStairs(cost []int) int {
 

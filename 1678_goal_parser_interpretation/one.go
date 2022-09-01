@@ -1,7 +1,6 @@
-package main
+package goalParserInterpretation
 
 import (
-	"fmt"
 	"strings"
 )
 
@@ -25,8 +24,4 @@ func interpret(command string) string {
 		}
 	}
 	return result
-}
-
-func main() {
-	fmt.Println(interpret("(al)G(al)()()G"))
 }

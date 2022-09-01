@@ -1,7 +1,6 @@
-package main
+package checkIfOneStringSwapCanMakeStringsEqual
 
 import (
-	"fmt"
 	"strings"
 )
 
@@ -32,8 +31,4 @@ func areAlmostEqual(s1 string, s2 string) bool {
 		}
 	}
 	return false
-}
-
-func main() {
-	fmt.Println(areAlmostEqual("kelbbcd", "eklbdcb"))
 }

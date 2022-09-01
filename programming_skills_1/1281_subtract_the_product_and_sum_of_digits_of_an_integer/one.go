@@ -1,4 +1,4 @@
-package main
+package subtractTheProductAndSumOfDigitsOfAnInteger
 
 import (
 	"fmt"
@@ -13,8 +13,4 @@ func subtractProductAndSum(n int) int {
 		sum += int(v - '0')
 	}
 	return product - sum
-}
-
-func main() {
-	fmt.Println(subtractProductAndSum(123))
 }

@@ -1,8 +1,6 @@
-package main
+package romanToInteger
 
-import "fmt"
-
-func romanToInt(s string) int {
+func RomanToInt(s string) int {
 
 	sum := 0
 
@@ -55,8 +53,4 @@ func romanToInt(s string) int {
 		}
 	}
 	return sum
-}
-
-func main() {
-	fmt.Println(romanToInt("LVIII"))
 }

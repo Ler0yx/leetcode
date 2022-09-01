@@ -1,4 +1,4 @@
-package main
+package fibonacciNumber
 
 import "fmt"
 

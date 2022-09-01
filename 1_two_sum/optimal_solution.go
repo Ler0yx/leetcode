@@ -1,4 +1,4 @@
-package main
+package twoSum
 
 func twoSum2(nums []int, target int) []int {
 
@@ -11,17 +11,17 @@ func twoSum2(nums []int, target int) []int {
 		remainder := target - v
 
 		//Creates a bool that turns true if the remainder is a key of result,
-        //meaning that the value at this index + the value at the index remainder = target
+		//meaning that the value at this index + the value at the index remainder = target
 		if _, ok := result[remainder]; ok {
 			return []int{result[remainder], i}
 
-        //If the bool is false, we create an entry with the value as the key and the index as the value
+			//If the bool is false, we create an entry with the value as the key and the index as the value
 		} else {
 			result[v] = i
 		}
 	}
 
-    //Just a placeholder return to satisy the compiler
+	//Just a placeholder return to satisy the compiler
 	return []int{}
 }
 

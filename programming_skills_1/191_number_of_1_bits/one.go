@@ -1,4 +1,4 @@
-package main
+package numberOf1Bits
 
 import "fmt"
 
@@ -11,8 +11,4 @@ func hammingWeight(num uint32) int {
 		}
 	}
 	return weight
-}
-
-func main() {
-	fmt.Println(hammingWeight(00000000000000000000000000001011))
 }
