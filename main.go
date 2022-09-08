@@ -1,11 +1,16 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	b "leetcode/1109_corporate_flight_bookings"
+)
 
 func main() {
 
-	acc := 9999 % 26
+	//bookings = [[1,2,10],[2,3,20],[2,5,25]], n = 5
+	// bookings := [][]int{{1, 2, 10}, {2, 3, 20}, {2, 5, 25}}
+	bookings := [][]int{{2, 2, 30}, {2, 2, 45}}
+	n := 2
 
-	fmt.Println(acc)
-
+	fmt.Println(b.CorpFlightBookings2(bookings, n))
 }
