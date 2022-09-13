@@ -1,4 +1,4 @@
-package main
+package complementOfBase10Integer
 
 import (
 	"fmt"
@@ -6,9 +6,7 @@ import (
 	"strings"
 )
 
-func main() {
-
-	n := 5
+func bitwiseComplement(n int) int {
 	solutionSlice := []string{}
 
 	nString := fmt.Sprintf("%b", n)
@@ -23,5 +21,5 @@ func main() {
 	}
 	solutionString := strings.Join(solutionSlice, "")
 	solution, _ := strconv.ParseInt(solutionString, 2, 64)
-	fmt.Println(solution)
+	return int(solution)
 }
