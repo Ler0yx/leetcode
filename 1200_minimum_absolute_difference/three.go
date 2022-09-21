@@ -1,5 +1,10 @@
 package minimumAbsoluteDifference
 
+import (
+	"math"
+	"sort"
+)
+
 func abs(x int) int {
 	if x < 0 {
 		return -x
@@ -9,8 +14,10 @@ func abs(x int) int {
 
 func minimumAbsDifference(arr []int) [][]int {
 
-	var minDiff int
+	var minDiff = math.MaxInt
 	solution := make([][]int, 0)
+
+	sort.Ints(arr)
 
 	for i := 0; i < len(arr)-1; i++ {
 		if abs(arr[i]-arr[i+1]) < minDiff {
@@ -19,12 +26,9 @@ func minimumAbsDifference(arr []int) [][]int {
 	}
 
 	for i := 0; i < len(arr)-1; i++ {
-		for j := i + 1; j < len(arr); j++ {
-			if abs(arr[i]-arr[j]) == minDiff {
-				tmp := []int{arr[i], arr[j]}
-				solution = append(solution, tmp)
-				break
-			}
+		if abs(arr[i]-arr[i+1]) == minDiff {
+			tmp := []int{arr[i], arr[i+1]}
+			solution = append(solution, tmp)
 		}
 	}
 	return solution
