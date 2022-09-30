@@ -1,6 +1,6 @@
 package containsDuplicate
 
-func containsDuplicate(nums []int) bool {
+func containsDuplicate3(nums []int) bool {
 
 	numsMap := make(map[int]int)
 
