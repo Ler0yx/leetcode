@@ -42,10 +42,3 @@ func canMakeArithmeticProgression(arr []int) bool {
 	}
 	return true
 }
-
-func main() {
-
-	nums := []int{5, -5, 15}
-
-	fmt.Println(canMakeArithmeticProgression(nums))
-}
