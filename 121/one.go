@@ -1,4 +1,4 @@
-package bestTimeToBuyAndSellSt
+package bestTimeToBuyAndSellStock
 
 func maxProfit(prices []int) int {
 
