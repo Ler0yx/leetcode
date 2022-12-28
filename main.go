@@ -1,9 +1,14 @@
 package main
 
-import (
-	c "leetcode/1812_determine_color_of_a_chessboard"
-)
+import "fmt"
 
 func main() {
-	c.SquareIsWhite("h3")
+	words := []string{"hello", "i", "am", "leetcode", "hello"}
+	// target := "hello"
+	// startIndex := 1
+	lenW := len(words)
+
+	for i := 0; i < len(words); i++ {
+		fmt.Println((i + 1) % lenW)
+	}
 }
