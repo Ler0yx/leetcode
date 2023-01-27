@@ -26,7 +26,6 @@ func canConstruct(ransomNote string, magazine string) bool {
 		fmt.Println(noteMap)
 		fmt.Println(magMap)
 		if noteMap[byte(j)] > magMap[byte(j)] {
-			fmt.Println("hier")
 			return false
 		}
 	}
