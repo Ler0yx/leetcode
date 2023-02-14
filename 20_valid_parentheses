@@ -1,0 +1,35 @@
+package validParentheses
+
+func isValid(s string) bool {
+    res := make([]int, 3)
+    for _, v := range s {
+
+        switch {
+            case string(v) == `(`:
+            res[0] += 1
+
+            case string(v) == `[`:
+            res[1] += 1
+
+            case string(v) == `{`:
+            res[2] += 1
+
+            case string(v) == `)`:
+            res[0] -= 1
+            if res[0] < 0 {return false}
+
+            case string(v) == `]`:
+            res[1] -= 1
+            if res[1] < 0 {return false}
+
+            case string(v) == `}`:
+            res[2] -= 1
+            if res[2] < 0 {return false}
+            
+        }
+    }
+    if res[0] != 0 || res[1] != 0 || res[2] != 0 {
+        return false
+    }
+    return true
+}
